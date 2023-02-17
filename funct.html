@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    {
+        function wp(a,b){
+            return a*b;
+
+        }
+        document.write("function with arguments:"+wp(3,4)+"<br>");
+    }
+    {
+        const x=function(a,b){
+            return a+b;
+        }
+        let z=x(3,2);
+        document.write("function used as values:"+z+"<br>");
+    }
+    {
+        const my=new Function("a","b","return a*b");
+        let y= my(4,3)
+        document.write("function with constructor:"+y+"<br>");
+    }
+    {
+        (function (){
+            document.write("self invoking function"+"<br>");
+        })();
+    }
+    {
+        function  prop(a,b){
+            return arguments.length;
+        }
+        document.write("functions are objects:"+prop(4,3)+"<br>")
+        function myfunction(c,d){
+            return c*d;
+        }
+        let x=myfunction.toString();
+        document.write("used the method for function"+x+"<br>");
+
+    }
+    {
+        const x=(x,y)=> x*y;
+        document.write("this is arrow function"+x(5,5)+"<br>");
+        
+        function myFunction(x, y = 10) {
+                return x + y;
+        }
+        document.write("default parameter:"+ myFunction(5)+"<br>");
+        function sum(... args){
+            let sum=0;
+            for(let i of args)
+              sum+=i;
+            return sum
+
+        }
+        let r=sum(2,3,4,5,6,7);
+        document.write("indefinite arguments:"+r+"<br>");
+
+            function findMax() {
+            let max = -Infinity;
+            for (let j = 0; j < arguments.length; j++) {
+                if (arguments[j] > max) {
+                max = arguments[j];
+                }
+            }
+            return max;
+            }
+        document.write("arguments obj find max"+findMax(5,9,2)+"<br>");
+        const myObject = {
+                firstName:"John",
+                lastName: "Doe",
+                fullName: function () {
+                    return this.firstName + " " + this.lastName;
+                }
+                }
+        document.write("objs"+ myObject.fullName()+"<br>");
+
+
+        const person = {
+                fullName: function(city, country) {
+                    return this.firstName + " " + this.lastName + "," + city + "," + country;
+                }
+                }
+
+                const person1 = {
+                firstName:"John",
+                lastName: "Doe"
+                }
+                const person2 = {
+                firstName:"veda",
+                lastName: "priya"
+                }
+
+            document.write("call method with arguments:"+person.fullName.call(person2, "Oslo", "Norway")+"<br>");
+            //apply method pass arguments as arraya where call methods take argument sepreately
+            document.write("apply method:"+person.fullName.apply(person1, ["Oslo", "Norway"])+"<br>");
+    }
+    {
+        function addnum(first,second)
+        {
+            var returnvalue="Result is :";
+            function add(){
+                return (returnvalue+(first+second));
+            }
+            return add();
+        }
+        var result=addnum(10,20);
+        document.write("clouser property:"+result+"<br>");
+    }
+    {
+        const person = {
+                firstName: "John",
+                lastName: "Doe",
+                age: 50,
+                eyeColor: "blue"
+                };
+          
+    
+        document.write(person.firstName + " is " + person.age + " years old.<br>");
+        const person1 = {};
+                person1.firstName = "John1";
+                person1.lastName = "Doe1";
+                person1.age = 500;
+                person1.eyeColor = "blue1"; 
+
+                document.write(person1.firstName + " is " + person1.age + " years old.<br>");
+                
+        const person2 = new Object();
+            person2.firstName = "veda";
+            person2.lastName = "priya";
+            person2.age = 10;
+            //adding new properties to the paricular obj
+            person2.eyeColor = "green";
+            //deleting elements 
+            delete person2.age;
+
+            document.write(person2["firstName"] + " is " + person2.age + " years old.<br>");
+            
+            const person3 = {
+                name: "harsha",
+                age: 30,
+                city: "New York"
+                };
+
+                const myArray = Object.values(person3);
+                document.write(myArray+"<br>");
+                //obj created using the constructors
+                function Person(first, last, age, eye) {
+                        this.firstName = first;
+                        this.lastName = last;
+                        this.age = age;
+                        this.eyeColor = eye;
+                        }
+
+                        // Create a Person object
+                        const myFather = new Person("John", "Doe", 50, "blue");
+                        // Add nationality to existing  object 
+                        myFather.nationality = "English";
+                        //adding new property to obj constructor
+                        Person.prototype.nationality = "English";
+
+                        // Display age
+                        document.write("My father is " + myFather.age + myFather.nationality+"<br>");
+                        //obj creating new property
+                        const person5= {
+                            firstName: "John",
+                            lastName: "Doe",
+                            language: "EN"
+                            };
+
+                            // Add a property
+                            Object.defineProperty(person5, "year", {value:"2008"})
+                        document.write(person5.year+"<br>");
+                        //the defineProperty() method to add a getter and a setter.
+                        Object.defineProperty(person5, "fullName", {
+                                get: function () {return this.firstName + " " + this.lastName;}
+                                });
+                        document.write(person5.fullName+"<br>")
+        // Create a Set
+        const letters = new Set(["a","b","c"]);
+        let d="d"
+        // Add Variables to the Set
+        
+        letters.add(d);
+        let text = "";
+        letters.forEach (function(value) {
+           text += value+"<br>";
+        })
+        document.write(text)
+        // List all entries
+        //entries() Returns an Iterator with [value,value] pairs from a Set
+            const iterator = letters.entries();
+            let ext = "";
+            for (const entry of iterator) {
+            ext += entry + "<br>";
+            }
+
+            document.write(ext);
+    }
+    </script>
+</body>
+</html>

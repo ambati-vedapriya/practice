@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo">This is first javascript demo</p>
+    <button type="button" onclick='document.getElementById("demo").innerHTML="hai everyone"'>CLICK ME</button>
+    <p id="demo1">JavaScript can hide HTML elements.</p>
+
+<button type="button" onclick="document.getElementById('demo1').style.display='none'">Click Me!</button>
+<p id="demo3">JavaScript can change the style of an HTML element.</p>
+
+<button type="button" onmouseover="document.getElementById('demo3').style.fontSize='35px'">Click Me!</button>
+<p>JavaScript can show hidden HTML elements.</p>
+<p id="demo4" style="display:none">Hello JavaScript!</p>
+<button type="button" onchange="document.getElementById('demo4').style.display='block'">Click Me!</button>
+
+<button type="button" onclick="document.write(5 + 6)">Try it</button>
+<p>Click the button to print the current page.</p>
+
+<button onclick="window.print()">Print this page</button>
+<p id="demo6"></p>
+<p id="demo7"></p>
+<p id="demo5"></p>
+<p id="demo8"></p>
+<script>
+    document.getElementById("demo5").innerHTML = "My First JavaScript";
+    window.alert(5 + 6);
+    var x=10;
+    let y=10
+    {
+        var x=2
+        let y=20
+    }
+    document.write(x +"<br>");
+    document.write(y);
+    {
+        let a=6; b=2;
+        let c,d,e,f;
+        c=a+b;
+        d=a-b;
+        e=a/b;
+        f=a%b;
+        g=a*b;
+        h=a**b;
+        i=++a;
+        j=--b;
+        document.getElementById("demo5").innerHTML="Arthmetic operations(+,-,/,%,*,**,++,--) a=6,b=2 a+b="+c+" ,a-d= "+ d +",a/b= "
+        +e+" ,a%b= "+f+" ,a*b= "+g+" ,a**b= "+h+" ,++a= "+i+ " ,--b= "+j;
+    }
+    {
+        let x = 5 + 5;
+        let y = "5" + 5;
+        let z = "Hello" + 5;
+        document.getElementById("demo6").innerHTML =
+        x + "<br>" + y + "<br>" + z;
+        
+    }
+    {
+           let x = 5;
+            let y = 5;
+            let z = 6;
+            const cars = ["Saab","Volvo","BMW"];
+            const person = {
+                    firstName : "John",
+                    lastName  : "Doe",
+                    age     : 50,
+                    eyeColor  : "blue"
+                    };
+
+            document.getElementById("demo7").innerHTML =
+            (x == y) + "<br>" + (x == z)+"<br>"+(x>=y)+"<br>"+(x<=y)+"<br>"+cars+"<br>"+person.firstName + " is " + person.age + " years old.";
+            let t = BigInt("123456789012345678901234567890");
+            document.write(t);
+    }
+    {
+    var x = myFunction(4, 3);
+document.getElementById("demo8").innerHTML ="my function of multiplication" +x;
+
+function myFunction(a, b) {
+  return a * b;
+}}
+</script>
+</script>
+    
+</body>
+</html>

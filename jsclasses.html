@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js classes</title>
+</head>
+<body>
+    <script>
+        {
+        class Car {
+                    constructor(name, year) {
+                        this.name = name;
+                        this.year = year;
+                    }
+                    age() {
+                        let date = new Date();
+                        return date.getFullYear() - this.year;
+                    }
+                    //passing paramter to method
+                    age1(x) {
+                        return x - this.year;
+                    }
+
+                    }
+                    let date = new Date();
+                    let year = date.getFullYear();
+
+                    const myCar = new Car("Ford", 2014);
+                    let myCar2 = new Car("Audi", 2019);
+                    document.write(myCar.name + " " + myCar.year+" my car is "+ myCar.age() + " years old.<br>");
+                    document.write(myCar2.name + " " + myCar2.year+"My car is " + myCar2.age1(year) + " years old.<br>");
+            
+        }
+        {
+            //inheritance of the classes
+            class veda{
+                constructor(college){
+                    this.college=college;
+                }
+                present(){
+                    return 'I am studying '+this.college;
+                }
+            }
+            class priya extends veda{
+                constructor(college,branch){
+                    super(college);
+                    this.branch=branch;
+                }
+                show(){
+                    return this.present()+" in the branch of "+this.branch;
+                }
+
+            }
+            const x=new priya('AITAM','CSE');
+            document.write(x.show()+"<br>");
+
+        }
+        {
+            class Car {
+                    constructor(brand) {
+                        this._carname = brand;
+                    }
+                    get carname() {
+                        return this._carname;
+                    }
+                    set carname(x) {
+                        this._carname = x;
+                    }
+                    }
+
+                    let myCar = new Car("Ford");
+                    myCar.carname = "Volvo";
+                    document.write(myCar.carname+"<br>");
+        } 
+        {
+            class Car {
+                    constructor(name) {
+                        this.name = name;
+                    }
+                    static hello() {
+                        return "Hello!!";
+                    }
+                    static hello1(x) {
+                        return "Hello " + x.name;
+                    }
+
+                    }
+
+                    let myCar = new Car("Ford");
+
+                    // You can call 'hello()' on the Car Class:
+                    document.write(Car.hello()+"<br>");
+
+                    // But NOT on a Car Object:
+                    // document.getElementById("demo").innerHTML = myCar.hello();
+                    // this will raise an error.
+                    //If you want to use the myCar object inside the static method, you can send it as a parameter:
+                    document.write(Car.hello1(myCar))
+        }        
+    </script>
+</body>
+</html>

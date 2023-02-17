@@ -1,0 +1,125 @@
+
+/*chaining*/
+.description h5{
+    color: blueviolet;
+  }
+  /*chaining and specificity*/
+  li h4{
+    color: gold;
+  }
+  h4{
+    color: dodgerblue;
+  }
+/*Multiple Selectors*/
+h1, .heading-background
+{
+    color:firebrick;
+}
+img{
+    opacity:0.7;
+}
+.description li{
+    font-weight: bold;
+}
+.box{
+  border: 2px solid red;
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  margin: 2px;
+}
+/*#box3 {
+  position: relative;
+  top: 34px;
+  left: 34px;       
+}
+#box2 {
+  position: absolute;
+  top: 34px;
+  left: 34px;        
+  }
+.container{
+  border: 2px solid black;
+  background-color: khaki;
+  height: 140px;
+}*/
+.continer1{
+background-color: coral;
+height: 700px;
+width:900px;
+display: grid;
+/*grid-template-rows:133px 133px ;
+grid-template-columns: 133px 133px;
+grid-template-columns:repeat(3,1fr) ;
+grid-template-rows:repeat(3,1fr) ;*/
+grid-template-columns:1fr 1fr 1fr ;
+grid-template-rows:43px 1fr 43px ;
+row-gap:10px;
+column-gap:15px;
+justify-items: start;
+/*align-items: center;*/
+place-items: center;
+}
+.item
+{
+  background-color: aquamarine;
+ height: 122px;
+  width: 122px;
+}
+.item1{
+  /*grid-column-start: 1;
+  grid-column-end: 4;*/
+  grid-column: 1 /span 3;
+  background-color: black;
+  width: 100%;
+  color: azure;
+
+}
+.item2{
+ /* justify-self: center;
+  align-self: center;*/
+  place-self: center;
+}
+
+.footer
+{
+  grid-column-start: 1;
+  grid-column-end: 4;
+  background-color: black;
+  width: 100%;
+}
+.f-continer2{
+  display: flex;
+  border: 2px solid black;
+  height: 45vh;
+/*flex-direction: row-reverse;
+justify-content: center;
+
+
+justify-content: flex-start;
+justify-content: flex-end;
+align-items: center;
+align-items: flex-start;
+justify-content: space-evenly;
+flex-wrap: wrap;
+flex-flow: column wrap;*/
+}
+.fitem{
+  background-color: darkslateblue;
+  border:2px solid black;
+width: 122px;
+height: 122px;
+  margin: 12px;
+  font-size: 55px;
+
+}
+.fitem1
+{
+  order: 5;
+  flex-grow: 3;
+  align-self: center;
+}
+.fitem3
+{
+  flex-shrink: 3;
+}

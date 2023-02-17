@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+      <meta charset="utf-8">
+      <title>validation</title>
+      <link href="style.css" rel='stylesheet'>
+      <style>
+        input{
+          border-radius: 8px;
+        }
+      </style>
+      
+      
+    </head>
+    <body>
+        
+      <section class="overlay">
+        <h1 style="color:rgb(5, 5, 5);text-align:center;">Guess the right number!</h1>
+       
+        <div  id="second">
+          <img  src="gu1.jpg"/>
+        </div>
+
+        <div id="one">
+          <h3 class="try" id="try-id">TRY THE NUMBER</h3>
+          What is the guessing number?
+          A number guessing game is a simple guessing game where a user is supposed to guess a number between 0 and N in a maximum of 10 attempts. The game 
+          will end after 10 attempts and if the player failed to guess the number, and then he loses the game. <a href="cat.html" target="_self">This is cat page</a></div>
+        
+          <div class="third hai">
+        <form action="check.html" method="GET">
+          <!--Add a required attribute to the input element-->
+          <label for="guess">Enter a number between 1-10:</label>
+          <br>
+          <input type="number" name="guess" id="guess" required>
+          <br>
+          <label for="guests">Enter # of guests(1-4):</label><br>
+            <input id="guests" name="guests" type="number" min="1" max="4">
+            <br>
+            <label for="summary">Summarize your feelings in less than 250 characters</label><br>
+            <input id="summary" name="summary" type="text" minlength="5" maxlength="250" required><br>
+            <label for="pw">Password:</label>
+             <br>
+            <input id="pw" name="pw" type="password" minlength="8" maxlength="15" required>
+            <br>
+            <label for="payment">Credit Card Number (no spaces):</label>
+            <br>
+            <input id="payment" name="payment" type="text" required pattern="[0-9]{14,16}">
+            <br>
+            <label for="username">Username(no special chars):</label>
+            <br>
+				<!--no special characters-->
+			<input id="username" name="username" type="text" required minlength="3" maxlength="15" pattern="[a-zA-Z0-9]+">
+          <br>
+            <input type="submit" id="submission" value="Submit">
+
+        </form>
+        </div>
+
+      </section>
+      
+      
+      
+    </body>
+  </html>
+</html>

@@ -1,0 +1,100 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    
+}
+body{
+    overflow: hidden;
+    
+    background: linear-gradient(to bottom, #666699 7%, #66ffcc 100%);
+    
+}
+h1{
+    font-size: 60px;
+    font-family: monospace;
+}
+#one{
+    color: black;
+    border: 5px dotted rgb(7, 7, 7);
+    border-radius: 10px;
+    color:rgb(249, 244, 244);
+    margin-left: 55%;
+    margin-right: 5%;
+    margin-top: -40%;
+    padding: 2%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.hai{
+    border: 5px double rgb(8, 8, 8);
+    text-align: center;
+}
+#second
+{
+    border-radius: 20%;
+    
+}
+.third{
+    margin-left: 60%;
+   
+    margin-right: 10%;
+    
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 2%;
+    border-radius: 20%;
+    border-radius: 10px;
+    border-spacing: 2cm;
+    box-shadow: 10px 15px 5px rgb(74, 74, 74);
+}
+img[src*='gu1']
+{
+   width: 50%;
+   height: 680px;
+   
+   
+}
+[href]
+{
+    color: rgb(186, 52, 57);
+}
+#submission
+{
+    padding: 2px;
+    margin-top: 10px;
+}
+h1:hover {
+    background-color: rgb(255, 0, 238);
+  }
+  a:link {
+    color: rgb(202, 213, 39);
+  }
+  
+  /* visited link */
+  a:visited {
+    color: green;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: hotpink;
+  }
+  
+  /* selected link */
+  a:active {
+    color: blue;
+  }
+  /*specificity*/
+  h1{
+color: coral;
+  }
+  .try
+  {
+    color:aliceblue
+
+  }
+  #try-id
+  {
+    color: rgb(229, 21, 21);
+
+  }
